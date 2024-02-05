@@ -47,6 +47,8 @@ app.ticker.add((delta) => main_loop(delta));
 document.addEventListener("keydown", keyboard_listener);
 
 function main_loop(delta) {
+  if (Math.random() < 0.8) return;
+
   const rect = new Graphics();
   rect
     .beginFill(0xffffff)
