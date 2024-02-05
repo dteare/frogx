@@ -4,11 +4,15 @@
   "description": "Froggy Crossing",
   "main": "index.js",
   "scripts": {
+    "dev": "http-server ./ -p 8080 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "J&D",
   "license": "ISC",
   "dependencies": {
     "pixi.js": "^7.4.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }

@@ -1,6 +1,7 @@
 console.log("Froggy is the best! 🐸🤘");
 
 const Application = PIXI.Application;
+const Graphics = PIXI.Graphics;
 
 const app = new Application({
   width: window.innerWidth,
@@ -12,10 +13,48 @@ app.renderer.view.style.position = "absolute";
 
 document.body.appendChild(app.view);
 
-const Graphics = PIXI.Graphics;
+const style = {
+  fontSize: 48,
+  fill: "green",
+  stroke: "#ffffff",
+  strokeThickness: 3,
+  dropShadow: true,
+  dropShadowDistance: 10,
+  dropShadowAngle: Math.PI / 2,
+  dropShadowBlue: 4,
+  sropShadowColor: "0x000000",
+};
+const title = new PIXI.Text("Frog Crossing!", style);
+app.stage.addChild(title);
 
-const rect = new Graphics();
-rect.beginFill(0xaa3333);
-rect.drawRect(500, 500, 50, 50);
+const frog = PIXI.Sprite.from("/images/frog.png");
 
-app.stage.addChild(rect);
+frog.x = app.screen.width / 2;
+frog.y = app.screen.height / 2;
+frog.anchor.set(0.5, 0.5);
+frog.scale.set(0.5, 0.5);
+
+app.stage.addChild(frog);
+
+frog.interactive = true;
+frog.on("pointerdown", () => {
+  frog.scale.x += 0.1;
+  frog.scale.y += 0.1;
+});
+
+app.ticker.add((delta) => main_loop(delta));
+
+function main_loop(delta) {
+  const rect = new Graphics();
+  rect
+    .beginFill(0xffffff)
+    .drawRect(
+      Math.random() * app.screen.width,
+      Math.random() * app.screen.height,
+      5,
+      5
+    )
+    .endFill();
+
+  app.stage.addChild(rect);
+}
