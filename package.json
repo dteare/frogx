@@ -1,0 +1,14 @@
+{
+  "name": "frogx",
+  "version": "1.0.0",
+  "description": "Froggy Crossing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J&D",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "^7.4.0"
+  }
+}
