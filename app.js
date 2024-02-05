@@ -37,12 +37,14 @@ frog.scale.set(0.5, 0.5);
 app.stage.addChild(frog);
 
 frog.interactive = true;
+frog.buttonMode = true;
 frog.on("pointerdown", () => {
   frog.scale.x += 0.1;
   frog.scale.y += 0.1;
 });
 
 app.ticker.add((delta) => main_loop(delta));
+document.addEventListener("keydown", keyboard_listener);
 
 function main_loop(delta) {
   const rect = new Graphics();
@@ -57,4 +59,20 @@ function main_loop(delta) {
     .endFill();
 
   app.stage.addChild(rect);
+}
+
+// e is the keydown event sent to our listener
+function keyboard_listener(e) {
+  if (e.key === "ArrowRight") {
+    frog.x += 10;
+  }
+  if (e.key === "ArrowLeft") {
+    frog.x -= 10;
+  }
+  if (e.key === "ArrowUp") {
+    frog.y -= 10;
+  }
+  if (e.key === "ArrowDown") {
+    frog.y += 10;
+  }
 }
