@@ -2,6 +2,15 @@
 
 Welcome to Froggy Crossing! 🐸
 
+## Tutorials
+
+Most of the code here was written after learning [PIXI.js] and [Matter.js]  from  these tutorials:
+
+* [Pixi.js Tutorial For Complete Beginners](https://www.youtube.com/watch?v=ajaduDDePIY)
+* [Introduction to Matter.js - The Nature of Code](https://www.youtube.com/watch?v=urR596FsU68&list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_)
+
+Watching these are a great way to get started with this codebase.
+
 ## Setup
 
 ### Clone the repository
