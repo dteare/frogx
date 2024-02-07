@@ -10,7 +10,7 @@ You'll need a GitHub account. [Sign up to GitHub](https://github.com/signup) and
 
 Then download [GitHub Desktop](https://desktop.github.com), launch, and select `File > Clone Repository` from the menu. Enter https://github.com/dteare/frogx under the `URL` tab and press `Clone` to copy all the files to your machine. 
 
-![./docs/github-desktop-clone-repo.png](Screenshot of GitHub Desktop)
+![Screenshot of GitHub Desktop](./docs/github-desktop-clone-repo.png)
 
 You will be able to find them in the “Local Path”.
 
