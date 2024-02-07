@@ -4,7 +4,23 @@ Weclome to Froggy Crossing! 🐸
 
 ## Setup
 
-Make sure you have [NodeJS](https://nodejs.org/en) installed and then run:
+### Clone the repository
+
+You'll need a GitHub account. [Sign up to GitHub](https://github.com/signup) and store the login details in [1Password](https://1password.com/). 
+
+Then download [GitHub Desktop](https://desktop.github.com), launch, and select `File > Clone Repository` from the menu. Enter https://github.com/dteare/frogx under the `URL` tab and press `Clone` to copy all the files to your machine. 
+
+![./docs/github-desktop-clone-repo.png](Screenshot of GitHub Desktop)
+
+You will be able to find them in the “Local Path”.
+
+### Development environment
+
+Install [NodeJS](https://nodejs.org/en).
+
+### Running the app
+
+Open Terminal,`cd` into the project directory, and then run these commands:
 
 - `npm install`
 - `npm run dev`
